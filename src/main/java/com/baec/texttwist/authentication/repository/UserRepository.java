@@ -1,6 +1,6 @@
-package com.baec.texttwist.repository;
+package com.baec.texttwist.authentication.repository;
 
-import com.baec.texttwist.model.AppUser;
+import com.baec.texttwist.authentication.model.AppUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<AppUser, Long>

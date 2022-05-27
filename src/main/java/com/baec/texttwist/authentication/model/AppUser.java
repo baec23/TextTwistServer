@@ -1,4 +1,4 @@
-package com.baec.texttwist.model;
+package com.baec.texttwist.authentication.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

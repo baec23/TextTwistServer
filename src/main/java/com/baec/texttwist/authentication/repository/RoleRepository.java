@@ -1,6 +1,6 @@
-package com.baec.texttwist.repository;
+package com.baec.texttwist.authentication.repository;
 
-import com.baec.texttwist.model.Role;
+import com.baec.texttwist.authentication.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RoleRepository extends JpaRepository<Role, Long>

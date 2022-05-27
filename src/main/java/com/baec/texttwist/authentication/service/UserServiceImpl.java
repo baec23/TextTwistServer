@@ -1,9 +1,9 @@
-package com.baec.texttwist.service;
+package com.baec.texttwist.authentication.service;
 
-import com.baec.texttwist.model.AppUser;
-import com.baec.texttwist.model.Role;
-import com.baec.texttwist.repository.RoleRepository;
-import com.baec.texttwist.repository.UserRepository;
+import com.baec.texttwist.authentication.model.Role;
+import com.baec.texttwist.authentication.repository.RoleRepository;
+import com.baec.texttwist.authentication.repository.UserRepository;
+import com.baec.texttwist.authentication.model.AppUser;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -54,6 +54,8 @@ public class UserServiceImpl implements UserService, UserDetailsService
     public AppUser saveUser(AppUser user)
     {
         log.info("Saving new user to database : " + user.getUsername());
+        if(userRepository.findByUsername(user.getUsername()) != null)
+            return null;
         user.setPassword(passwordEncoder.encode(user.getPassword()));
         return userRepository.save(user);
     }

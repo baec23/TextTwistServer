@@ -1,7 +1,7 @@
-package com.baec.texttwist.service;
+package com.baec.texttwist.authentication.service;
 
-import com.baec.texttwist.model.AppUser;
-import com.baec.texttwist.model.Role;
+import com.baec.texttwist.authentication.model.Role;
+import com.baec.texttwist.authentication.model.AppUser;
 
 import java.util.List;
 
